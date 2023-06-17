@@ -1,0 +1,3 @@
+In this modified code, the friend declaration inside the Point class uses a template parameter U instead of T and a template parameter S instead of size. This ensures that the friend declaration matches the specialization of the operator<< outside the class. Now, the operator<< function has access to the private m_components member, and the code will compile and execute correctly.
+
+The reason for the thrown compiler error in the original code was the mismatch between the friend declaration inside the class and the specialization of the operator<< outside the class, leading to access restrictions on the private member.
